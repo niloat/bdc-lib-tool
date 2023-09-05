@@ -1,4 +1,4 @@
-import glob 
+import glob
 import dbf
 import pickle
 
@@ -11,7 +11,7 @@ def read_words(filename):
     print(table[tablesize-1])
     #print(table)
     for record in table:
-        for idx in range (1,25):
+        for idx in range (1,26):
             f_w = '单词' + str(idx)
             w = record[f_w].strip()
             if len(w) == 0 :
@@ -21,12 +21,12 @@ def read_words(filename):
             word = {'w':w, 'p': record[f_p].strip(), 'h': record[f_h].strip()}
             words.append(word)
             print("%d: %r" % (idx, word))
-            
+
     table.close()
     return words
 
 
 
-words = read_words('./ck/CK-99.PMS.dbf')
+words = read_words('./ck/CK-L1.PMS.dbf')
 #words = read_words('./ck/CK-E1.PMS.dbf')
 #print(words)
