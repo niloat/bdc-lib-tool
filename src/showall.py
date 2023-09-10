@@ -27,6 +27,6 @@ def read_words(filename):
 
 
 
-words = read_words('./ck/CK-L1.PMS.dbf')
+words = read_words('./ck/CK-JS.PMS.dbf')
 #words = read_words('./ck/CK-E1.PMS.dbf')
 #print(words)
